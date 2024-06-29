@@ -33,15 +33,21 @@ const Table = ({ rowCount }) => {
       <table>
         <thead>
           <tr>
-            <th>Col1</th>
-            <th>Col2</th>
+            <th>Col 1</th>
+            <th>Col 2</th>
+            <th>Col 3</th>
+            <th>Col 4</th>
+            <th>Col 5</th>
           </tr>
         </thead>
         <tbody>
           {tabledata.slice(0, rowCount).map((data) => (
             <tr>
-              <td>data1</td>
-              <td>data2</td>
+              <td>data 1</td>
+              <td>data 2</td>
+              <td>data 3</td>
+              <td>data 4</td>
+              <td>data 5</td>
             </tr>
           ))}
         </tbody>
