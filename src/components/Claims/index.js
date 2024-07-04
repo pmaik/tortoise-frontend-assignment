@@ -1,10 +1,10 @@
 import React from "react";
-import { Box, Heading } from "grommet";
+import { Box } from "grommet";
+// import Header from "../Header";
 
 const Claims = () => {
   return (
-    <Box width="large" background="#fff" round="6px">
-      <Heading>Claims</Heading>
+    <Box width="xlarge" background="#fff" round="6px">
     </Box>
   );
 };
