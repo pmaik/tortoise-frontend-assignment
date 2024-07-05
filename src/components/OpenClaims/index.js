@@ -1,8 +1,8 @@
 import React from "react";
 import { Box, Text } from "grommet";
+import FiltersPanel from "../FiltersPanel";
 
 const OpenClaims = () => {
-    console.log("OpenClaims rendered");
   return (
     <Box>
       <Text>OpenClaims</Text>
