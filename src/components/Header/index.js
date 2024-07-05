@@ -56,12 +56,14 @@ const Header = () => {
             fit="contain"
             src={IPHONE_URL}
             width="200px"
-            margin={{ horizontal: "-40px", top: '90px' }}
+            margin={{ right: "-40px", left: "-52px", top: "90px" }}
           />
         </Box>
         <Box>
-          <Text weight="500">17 employees want to claim their device allowances</Text>
-          <Text weight="300" size="small" >
+          <Text weight={500}>
+            17 employees want to claim their device allowances
+          </Text>
+          <Text weight={300} size="small">
             Review their requests at the earliest to ensure a great benefit
             claim experience
           </Text>
