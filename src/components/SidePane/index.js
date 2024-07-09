@@ -111,7 +111,7 @@ const SidePane = () => {
         </Box>
       </Box>
 
-      <Box flex direction="row" justify="between" align="center">
+      <Box flex direction="row" justify="around" align="center">
         <Box background="#16AF8E" pad="xsmall" round="4px">
           <Text color="#fff" weight="bold">
             VK

@@ -1,9 +1,10 @@
 import React from "react";
 import { Box, Text } from "grommet";
+import { NavLink } from "react-router-dom";
 import { CheckCircle, CaretDown, CaretRight } from "phosphor-react";
 import { CustomStatusButton } from "../StyledComponents";
 
-const ClaimStatus = ({ text }) => {
+const ClaimStatus = ({ id, text }) => {
   return (
     <Box direction="row" gap="small" align="center">
       <CustomStatusButton
@@ -24,7 +25,11 @@ const ClaimStatus = ({ text }) => {
         }
         pad={{ horizontal: "small", vertical: "xsmall" }}
       />
-      <CaretRight size={20} color="#CBCBCB" />
+      <Box>
+        <NavLink to={`/claimdetails/${id}`}>
+          <CaretRight size={20} color="#CBCBCB" />
+        </NavLink>
+      </Box>
     </Box>
   );
 };

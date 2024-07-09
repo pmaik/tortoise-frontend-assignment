@@ -3,6 +3,7 @@ import { Box, Text } from "grommet";
 import ClaimStatus from "./ClaimStatus";
 
 const CustomTableCell = ({
+  id,
   text,
   subtext,
   icon,
@@ -23,7 +24,7 @@ const CustomTableCell = ({
       )}
       <>
         {isClaimStatus ? (
-          <ClaimStatus text={text} />
+          <ClaimStatus id={id} text={text} />
         ) : (
           <Box>
             <Text size="small" weight={500}>

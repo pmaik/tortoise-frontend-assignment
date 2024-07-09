@@ -1,9 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../../components/Layout";
-import Home from "../../components/Home";
+// import Home from "../../components/Home";
 import OpenClaims from "../../components/OpenClaims";
-import ApprovedClaims from "../../components/ApprovedClaims";
-import RejectedClaims from "../../components/RejectedClaims";
+// import ApprovedClaims from "../../components/ApprovedClaims";
+// import RejectedClaims from "../../components/RejectedClaims";
+import ClaimDetails from "../../components/ClaimDetails";
 
 export const router = createBrowserRouter([
   {
@@ -12,7 +13,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "",
-        element: <Home />,
+        element: <OpenClaims />,
       },
       {
         path: "open",
@@ -20,12 +21,16 @@ export const router = createBrowserRouter([
       },
       {
         path: "approved",
-        element: <ApprovedClaims />,
+        element: <OpenClaims />,
       },
       {
         path: "rejected",
-        element: <RejectedClaims />,
+        element: <OpenClaims />,
       },
     ],
+  },
+  {
+    path: "/claimdetails/:id",
+    element: <ClaimDetails />,
   },
 ]);

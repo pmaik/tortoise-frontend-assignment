@@ -41,10 +41,11 @@ const getDataObj = (header, item) => {
 };
 
 export const formatData = (items) => {
-  return items.map((item) =>
-    tableHeader.reduce((acc, header) => {
+  return items.map((item, index) => {
+    const obj = tableHeader.reduce((acc, header) => {
       acc[header.id] = getDataObj(header, item);
       return acc;
-    }, {})
-  );
+    }, {});
+    return { ...obj, id: index };
+  });
 };

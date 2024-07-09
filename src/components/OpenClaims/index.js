@@ -15,7 +15,6 @@ const OpenClaims = () => {
       const formatedData = formatData(dummyData);
       setData(formatedData);
       setIsLoading(false);
-      console.log(dummyData, formatedData);
     }, 0);
   }, []);
 
@@ -40,6 +39,7 @@ const OpenClaims = () => {
                       border={{ side: "all", color: "#EEEEEE" }}
                     >
                       <CustomTableCell
+                        id={rowData.id}
                         text={rowData[header.id].text}
                         subtext={rowData[header.id].subtext}
                         icon={
