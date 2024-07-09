@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { Box, Button, Text } from "grommet";
 import {
   CaretLeft,
@@ -36,7 +37,9 @@ const ClaimDetails = () => {
               ]}
               round={{ size: "6px", corner: "left" }}
             >
-              <CaretLeft color="#CBCBCB" size={25} />
+              <NavLink to={`/open`}>
+                <CaretLeft color="#CBCBCB" size={25} />
+              </NavLink>
             </Box>
             <Box
               border={{ side: "all", color: "#EEEEEE" }}
@@ -360,12 +363,7 @@ const ClaimDetails = () => {
           </Box>
         </Box>
 
-        <Box
-          direction="row"
-          align="center"
-          pad={{ top: "medium" }}
-          gap="large"
-        >
+        <Box direction="row" align="center" pad={{ top: "medium" }} gap="large">
           <Button
             label={<Text>Reject</Text>}
             pad={{ horizontal: "small", vertical: "xsmall" }}
