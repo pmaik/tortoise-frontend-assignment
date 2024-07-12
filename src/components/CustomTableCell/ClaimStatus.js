@@ -26,7 +26,7 @@ const ClaimStatus = ({ id, text }) => {
         pad={{ horizontal: "small", vertical: "xsmall" }}
       />
       <Box>
-        <NavLink to={`/claimdetails/${id}`}>
+        <NavLink to={`/details/${id}`}>
           <CaretRight size={20} color="#CBCBCB" />
         </NavLink>
       </Box>

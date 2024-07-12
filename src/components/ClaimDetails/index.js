@@ -1,9 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import { Box, Button, Text } from "grommet";
+import { Box, Text } from "grommet";
 import {
-  CaretLeft,
-  CaretRight,
   XCircle,
   Person,
   Money,
@@ -14,92 +11,20 @@ import {
   Smiley,
   CheckCircle,
 } from "phosphor-react";
+import { StyledButton } from "../StyledComponents";
 
 const ClaimDetails = () => {
-  console.log("ClaimDetails rendered");
   return (
-    <Box width="xlarge" background="#fff" round="6px">
-      <Box>
-        <Box
-          direction="row"
-          justify="between"
-          pad={{ vertical: "medium", horizontal: "large" }}
-          align="center"
-          border={{ side: "bottom", color: "#EEEEEE" }}
-          background="#FAFAFA"
-        >
-          <Box direction="row">
-            <Box
-              border={[
-                { side: "top", color: "#EEEEEE" },
-                { side: "bottom", color: "#EEEEEE" },
-                { side: "left", color: "#EEEEEE" },
-              ]}
-              round={{ size: "6px", corner: "left" }}
-            >
-              <NavLink to={`/open`}>
-                <CaretLeft color="#CBCBCB" size={25} />
-              </NavLink>
-            </Box>
-            <Box
-              border={{ side: "all", color: "#EEEEEE" }}
-              round={{ size: "6px", corner: "right" }}
-            >
-              <CaretRight color="#CBCBCB" size={25} />
-            </Box>
-          </Box>
-          <Text weight="bold">Aditya's Claim</Text>
-          <Box
-            border={{ side: "all", color: "#EEEEEE" }}
-            round="8px"
-            pad="xxsmall"
-          >
-            <XCircle color="#CBCBCB" size={20} />
-          </Box>
-        </Box>
-
-        <Box
-          pad={{ vertical: "medium", horizontal: "large" }}
-          direction="row"
-          align="center"
-          justify="between"
-          border={{ side: "bottom", color: "#EEEEEE" }}
-          background="#FAFAFA"
-        >
-          <Button
-            label="Claim Details"
-            pad={{ horizontal: "small", vertical: "xsmall" }}
-            style={{
-              border: "1px solid #EEEEEE",
-              borderRadius: "8px",
-              background: "#fff",
-              fontSize: "medium",
-            }}
-          />
-          <Button
-            label="Payment Breakdown"
-            pad={{ horizontal: "small", vertical: "xsmall" }}
-            style={{
-              border: "1px solid #EEEEEE",
-              borderRadius: "8px",
-              background: "#fff",
-              fontSize: "medium",
-            }}
-          />
-          <Button
-            label="Documents"
-            pad={{ horizontal: "small", vertical: "xsmall" }}
-            style={{
-              border: "1px solid #EEEEEE",
-              borderRadius: "8px",
-              background: "#fff",
-              fontSize: "medium",
-            }}
-          />
-        </Box>
-      </Box>
-
-      <Box pad="large" border={{ side: "bottom", color: "#EEEEEE" }}>
+    <Box
+      width="xlarge"
+      background="#fff"
+      round={{ size: "6px", corner: "bottom" }}
+      pad={{ vertical: "medium" }}
+    >
+      <Box
+        pad={{ horizontal: "large", bottom: "large" }}
+        border={{ side: "bottom", color: "#EEEEEE" }}
+      >
         <Box margin={{ bottom: "medium" }}>
           <Text weight={500} margin={{ bottom: "xsmall" }}>
             Request Details
@@ -254,7 +179,7 @@ const ClaimDetails = () => {
         </Box>
       </Box>
 
-      <Box pad="large">
+      <Box pad={{ horizontal: "large", top: "medium" }}>
         <Box direction="row" gap="small">
           <Box
             pad="xsmall"
@@ -364,7 +289,7 @@ const ClaimDetails = () => {
         </Box>
 
         <Box direction="row" align="center" pad={{ top: "medium" }} gap="large">
-          <Button
+          <StyledButton
             label={<Text>Reject</Text>}
             pad={{ horizontal: "small", vertical: "xsmall" }}
             style={{
@@ -375,12 +300,12 @@ const ClaimDetails = () => {
               width: "200px",
             }}
             icon={
-              <Box background="#F02C2C" round="50%">
-                <XCircle size={20} />
+              <Box background="#D57046" round="50%">
+                <XCircle size={20} color="#fff" />
               </Box>
             }
           />
-          <Button
+          <StyledButton
             label={<Text color="#fff">Approve</Text>}
             pad={{ horizontal: "small", vertical: "xsmall" }}
             style={{

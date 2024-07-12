@@ -2,7 +2,8 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { Box, Text, Nav, Image } from "grommet";
 import { NewspaperClipping } from "phosphor-react";
-import { getHeaderListStyle, IPHONE_URL } from "../Constants";
+import { getNavListStyles } from "../StyledComponents";
+import { IPHONE_URL } from "../Constants";
 
 const Header = () => {
   return (
@@ -21,7 +22,7 @@ const Header = () => {
           <NavLink
             to="/open"
             style={({ isActive }) => {
-              return getHeaderListStyle(isActive);
+              return getNavListStyles(isActive);
             }}
           >
             Open
@@ -29,7 +30,7 @@ const Header = () => {
           <NavLink
             to="/approved"
             style={({ isActive }) => {
-              return getHeaderListStyle(isActive);
+              return getNavListStyles(isActive);
             }}
           >
             Approved
@@ -37,7 +38,7 @@ const Header = () => {
           <NavLink
             to="/rejected"
             style={({ isActive }) => {
-              return getHeaderListStyle(isActive);
+              return getNavListStyles(isActive);
             }}
           >
             Rejected

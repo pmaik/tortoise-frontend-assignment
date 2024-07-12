@@ -1,7 +1,8 @@
 import React from "react";
-import { Box, Button, TextInput } from "grommet";
+import { Box, TextInput } from "grommet";
 import { Funnel, ListChecks } from "phosphor-react";
 import { Search } from "grommet-icons";
+import { StyledButton } from "../StyledComponents";
 
 const FiltersPanel = () => {
   return (
@@ -26,13 +27,13 @@ const FiltersPanel = () => {
         />
       </Box>
       <Box direction="row" align="center" justify="between" gap="small">
-        <Button
+        <StyledButton
           label="Filters"
           icon={<Funnel size={20} />}
           pad={{ horizontal: "small", vertical: "xsmall" }}
           style={{ border: "1px solid #EEEEEE", borderRadius: "8px" }}
         />
-        <Button
+        <StyledButton
           label="Bulk actions"
           icon={<ListChecks size={20} />}
           pad={{ horizontal: "small", vertical: "xsmall" }}
