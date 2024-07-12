@@ -1,10 +1,15 @@
 import React from "react";
+import { NavLink, useParams, useLocation } from "react-router-dom";
 import { Box, Nav, Text } from "grommet";
-import { NavLink } from "react-router-dom";
-import { CaretLeft, CaretRight, XCircle } from "phosphor-react";
+import { CaretLeft, CaretRight, X } from "phosphor-react";
 import { getClaimDetailsNavListStyles } from "../StyledComponents";
+import { DETAILS, PAYMENT, DOCUMENTS } from "../Constants";
 
-const ClaimsDetailsHeader = ({ id = 0 }) => {
+const ClaimsDetailsHeader = () => {
+  const { id } = useParams();
+  const location = useLocation();
+  const path = location.pathname.split("/")[1];
+
   return (
     <Box background="#FAFAFA" round={{ size: "6px", corner: "top" }}>
       <Box
@@ -38,9 +43,11 @@ const ClaimsDetailsHeader = ({ id = 0 }) => {
         <Box
           border={{ side: "all", color: "#EEEEEE" }}
           round="8px"
-          pad="xxsmall"
+          pad="xsmall"
         >
-          <XCircle color="#CBCBCB" size={20} />
+          <Box background="#CBCBCB" round="50%" pad="2px">
+            <X size={10} color="#fff" />
+          </Box>
         </Box>
       </Box>
 
@@ -51,30 +58,65 @@ const ClaimsDetailsHeader = ({ id = 0 }) => {
         pad={{ vertical: "small", horizontal: "large" }}
         border={{ side: "bottom", color: "#EEEEEE" }}
       >
-        <NavLink
-          to={`/details/${id}`}
-          style={({ isActive }) => {
-            return getClaimDetailsNavListStyles(isActive);
-          }}
-        >
-          Claim Details
-        </NavLink>
-        <NavLink
-          to={`/payment/${id}`}
-          style={({ isActive }) => {
-            return getClaimDetailsNavListStyles(isActive);
-          }}
-        >
-          Payment Breakdown
-        </NavLink>
-        <NavLink
-          to={`/documents/${id}`}
-          style={({ isActive }) => {
-            return getClaimDetailsNavListStyles(isActive);
-          }}
-        >
-          Documents
-        </NavLink>
+        <Box style={{ position: "relative" }}>
+          <NavLink
+            to={`/details/${id}`}
+            style={({ isActive }) => {
+              return getClaimDetailsNavListStyles(isActive);
+            }}
+          >
+            Claim Details
+          </NavLink>
+          {path === DETAILS && (
+            <Box
+              width="80px"
+              height="2px"
+              background="#16AF8E"
+              margin={{ vertical: "small" }}
+              style={{ position: "absolute", top: "36px", left: "18px" }}
+            />
+          )}
+        </Box>
+
+        <Box style={{ position: "relative" }}>
+          <NavLink
+            to={`/payment/${id}`}
+            style={({ isActive }) => {
+              return getClaimDetailsNavListStyles(isActive);
+            }}
+          >
+            Payment Breakdown
+          </NavLink>
+          {path === PAYMENT && (
+            <Box
+              width="125px"
+              height="2px"
+              background="#16AF8E"
+              margin={{ vertical: "small" }}
+              style={{ position: "absolute", top: "36px", left: "23px" }}
+            />
+          )}
+        </Box>
+
+        <Box style={{ position: "relative" }}>
+          <NavLink
+            to={`/documents/${id}`}
+            style={({ isActive }) => {
+              return getClaimDetailsNavListStyles(isActive);
+            }}
+          >
+            Documents
+          </NavLink>
+          {path === DOCUMENTS && (
+            <Box
+              width="75px"
+              height="2px"
+              background="#16AF8E"
+              margin={{ vertical: "small" }}
+              style={{ position: "absolute", top: "36px", left: "15px" }}
+            />
+          )}
+        </Box>
       </Nav>
     </Box>
   );

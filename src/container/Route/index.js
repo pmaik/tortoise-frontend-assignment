@@ -2,10 +2,12 @@ import { createBrowserRouter } from "react-router-dom";
 import Layout from "../../components/Layout";
 // import Home from "../../components/Home";
 import OpenClaims from "../../components/OpenClaims";
-// import ApprovedClaims from "../../components/ApprovedClaims";
-// import RejectedClaims from "../../components/RejectedClaims";
-import ClaimDetails from "../../components/ClaimDetails";
+import ApprovedClaims from "../../components/ApprovedClaims";
+import RejectedClaims from "../../components/RejectedClaims";
 import ClaimDetailsLayout from "../../components/ClaimDetailsLayout";
+import ClaimDetails from "../../components/ClaimDetails";
+import PaymentBreakdown from "../../components/ PaymentBreakdown";
+import Documents from "../../components/Documents";
 
 export const router = createBrowserRouter([
   {
@@ -22,11 +24,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "approved",
-        element: <OpenClaims />,
+        element: <ApprovedClaims />,
       },
       {
         path: "rejected",
-        element: <OpenClaims />,
+        element: <RejectedClaims />,
       },
     ],
   },
@@ -40,11 +42,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "payment/:id",
-        element: <ClaimDetails />,
+        element: <PaymentBreakdown />,
       },
       {
         path: "/documents/:id",
-        element: <ClaimDetails />,
+        element: <Documents />,
       },
     ],
   },

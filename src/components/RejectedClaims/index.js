@@ -1,13 +1,8 @@
 import React from "react";
-import { Box, Text } from "grommet";
+import OpenClaims from "../OpenClaims";
 
 const RejectedClaims = () => {
-  console.log("RejectedClaims rendered");
-  return (
-    <Box>
-      <Text>RejectedClaims</Text>
-    </Box>
-  );
+  return <OpenClaims />;
 };
 
 export default RejectedClaims;

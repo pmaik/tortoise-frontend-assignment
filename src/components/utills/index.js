@@ -49,3 +49,7 @@ export const formatData = (items) => {
     return { ...obj, id: index };
   });
 };
+
+export const shouldShowHorizontalLine = (activePath, current) => {
+  return activePath === current;
+};
