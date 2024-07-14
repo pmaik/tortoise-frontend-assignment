@@ -1,18 +1,19 @@
 import { createBrowserRouter } from "react-router-dom";
-import Layout from "../../components/Layout";
-// import Home from "../../components/Home";
+import RootLayout from "../../components/RootLayout";
 import OpenClaims from "../../components/OpenClaims";
 import ApprovedClaims from "../../components/ApprovedClaims";
 import RejectedClaims from "../../components/RejectedClaims";
 import ClaimDetailsLayout from "../../components/ClaimDetailsLayout";
-import ClaimDetails from "../../components/ClaimDetails";
-import PaymentBreakdown from "../../components/ PaymentBreakdown";
-import Documents from "../../components/Documents";
+import {
+  ClaimDetails,
+  PaymentBreakdown,
+  Documents,
+} from "../../components/DetailInfo";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: <RootLayout />,
     children: [
       {
         path: "",

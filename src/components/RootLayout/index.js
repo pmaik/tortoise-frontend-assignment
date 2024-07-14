@@ -4,7 +4,7 @@ import { Box } from "grommet";
 import Header from "../Header";
 import FiltersPanel from "../FiltersPanel";
 
-const Layout = () => {
+const RootLayout = () => {
   return (
     <Box width="xlarge" background="#fff" round="6px">
       <Header />
@@ -14,4 +14,4 @@ const Layout = () => {
   );
 };
 
-export default Layout;
+export default RootLayout;

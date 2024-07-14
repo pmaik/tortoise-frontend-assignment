@@ -12,16 +12,7 @@ const CustomTableCell = ({
 }) => {
   return (
     <Box direction="row" gap="small" align="center">
-      {icon && (
-        <Box
-          border={circularBorder}
-          round={circularBorder ? "50%" : "6px"}
-          background={!circularBorder ? "#ebebebf2" : "none"}
-          pad="4px"
-        >
-          {icon}
-        </Box>
-      )}
+      {icon}
       <>
         {isClaimStatus ? (
           <ClaimStatus id={id} text={text} />

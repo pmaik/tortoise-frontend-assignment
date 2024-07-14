@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import { Box } from "grommet";
-import ClaimsDetailsHeader from "../ClaimsDetailsHeader";
+import ClaimsDetailsHeader from "../DetailInfo/ClaimsDetailsHeader";
 
 const ClaimDetailsLayout = () => {
   return (

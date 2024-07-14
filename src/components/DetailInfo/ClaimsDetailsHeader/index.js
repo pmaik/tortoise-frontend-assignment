@@ -2,8 +2,8 @@ import React from "react";
 import { NavLink, useParams, useLocation } from "react-router-dom";
 import { Box, Nav, Text } from "grommet";
 import { CaretLeft, CaretRight, X } from "phosphor-react";
-import { getClaimDetailsNavListStyles } from "../StyledComponents";
-import { DETAILS, PAYMENT, DOCUMENTS } from "../Constants";
+import { getClaimDetailsNavListStyles } from "../../StyledComponents";
+import { DETAILS, PAYMENT, DOCUMENTS } from "../../Constants";
 
 const ClaimsDetailsHeader = () => {
   const { id } = useParams();
