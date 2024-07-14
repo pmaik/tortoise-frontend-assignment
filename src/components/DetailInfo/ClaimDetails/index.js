@@ -1,7 +1,9 @@
 import React from "react";
-import { Box, Text } from "grommet";
-import { Person, Money, Calendar, Note, DeviceMobile } from "phosphor-react";
+import { Box, Text, Image } from "grommet";
+import { Money, Calendar, Note, DeviceMobile } from "phosphor-react";
 import ApproveClaim from "../ApproveClaim";
+import Person from "../../../images/people1.jpeg";
+import IPhone from "../../../images/iphone_image.png";
 
 const ClaimDetails = () => {
   return (
@@ -29,21 +31,26 @@ const ClaimDetails = () => {
             border={{ side: "all", color: "#EEEEEE" }}
             round="6px"
           >
-            <Box direction="row" gap="small" align="centre">
-              <Box
-                border={{ side: "all", color: "#35dfb5" }}
-                round="50%"
-                pad="4px"
-                background="#17b6e0"
-              >
-                <Person size={32} color="#fff" />
+            <Box direction="row" gap="small" align="center">
+              <Box direction="row" align="center" justify="center">
+                <Image
+                  height="45px"
+                  width="45px"
+                  fit="cover"
+                  src={Person}
+                  alt="IPhone Image"
+                  style={{
+                    background: "#EEEEEE",
+                    borderRadius: "50%",
+                  }}
+                />
               </Box>
               <Box>
-                <Text size="small" weight={500}>
-                  Requested 5m ago
+                <Text weight={500} style={{ opacity: "85%" }}>
+                  Aditya Garikapati
                 </Text>
-                <Text weight="lighter" size="xsmall">
-                  12th April 2024
+                <Text size="small" weight={500} style={{ opacity: "50%" }}>
+                  Frontend Developer
                 </Text>
               </Box>
             </Box>
@@ -72,7 +79,7 @@ const ClaimDetails = () => {
             round="6px"
             margin={{ bottom: "small" }}
           >
-            <Box>
+            <Box gap="small">
               <Box
                 background="#FF91EE"
                 width="xxsmall"
@@ -83,16 +90,16 @@ const ClaimDetails = () => {
                 <Money size={32} color="#fff" />
               </Box>
               <Box>
-                <Text weight="lighter" size="xsmall">
+                <Text size="small" weight={500} style={{ opacity: "50%" }}>
                   Deductible amount
                 </Text>
-                <Text size="small" weight={500}>
+                <Text weight={500} style={{ opacity: "85%" }}>
                   ₹13,416 / month
                 </Text>
               </Box>
             </Box>
 
-            <Box>
+            <Box gap="small">
               <Box
                 background="#B59CF7"
                 width="xxsmall"
@@ -103,10 +110,10 @@ const ClaimDetails = () => {
                 <Calendar size={32} color="#fff" />
               </Box>
               <Box>
-                <Text weight="lighter" size="xsmall">
+                <Text size="small" weight={500} style={{ opacity: "50%" }}>
                   Tenure
                 </Text>
-                <Text size="small" weight={500}>
+                <Text weight={500} style={{ opacity: "85%" }}>
                   12 months
                 </Text>
               </Box>
@@ -114,7 +121,7 @@ const ClaimDetails = () => {
           </Box>
 
           <Box
-            background="#49ffd0"
+            background="#EEEEEE"
             border={{ side: "all", color: "#EEEEEE" }}
             round="6px"
             pad="small"
@@ -140,32 +147,32 @@ const ClaimDetails = () => {
             direction="row"
             align="center"
             justify="between"
-            pad="medium"
+            pad="small"
             border={{ side: "all", color: "#EEEEEE" }}
             round="6px"
           >
-            <Box direction="row" gap="small" align="centre">
-              <Box>
-                <Box
-                  border={{ side: "all", color: "#EEEEEE" }}
-                  round="6px"
-                  background="#ebebebf2"
-                  pad="4px"
-                >
-                  <DeviceMobile size={30} />
-                </Box>
+            <Box direction="row" gap="small" align="center">
+              <Box direction="row" align="center" justify="center">
+                <Image
+                  height="60px"
+                  width="60px"
+                  fit="cover"
+                  src={IPhone}
+                  alt="IPhone Image"
+                  style={{ background: "#EEEEEE" }}
+                />
               </Box>
               <Box>
-                <Text size="small" weight={500}>
+                <Text weight={500} style={{ opacity: "85%" }}>
                   iPhone 15
                 </Text>
-                <Text weight="lighter" size="xsmall">
+                <Text weight={500} size="small" style={{ opacity: "50%" }}>
                   128 GB • Black
                 </Text>
               </Box>
             </Box>
             <Box>
-              <Text size="small" weight={500}>
+              <Text weight={500} style={{ opacity: "75%" }}>
                 ₹ 79,999
               </Text>
             </Box>

@@ -64,10 +64,14 @@ const SidePane = () => {
         margin={{ top: "small" }}
       >
         <Box>
-          <UsersThree size={30} />
-          <Text weight="bold">Employees</Text>
+          <UsersThree size={30} color="#114036" />
+          <Text weight="bold" color="#114036">
+            Employees
+          </Text>
         </Box>
-        <Text weight="bold">3,456</Text>
+        <Text weight="bold" color="#114036">
+          3,456
+        </Text>
       </Box>
 
       <Box
@@ -81,10 +85,14 @@ const SidePane = () => {
         round="4px"
       >
         <Box>
-          <DeviceMobile size={30} />
-          <Text weight="bold">Devices</Text>
+          <DeviceMobile size={30} color="#114036" />
+          <Text weight="bold" color="#114036">
+            Devices
+          </Text>
         </Box>
-        <Text weight="bold">128</Text>
+        <Text weight="bold" color="#114036">
+          128
+        </Text>
       </Box>
 
       <Box
@@ -94,20 +102,28 @@ const SidePane = () => {
         gap="medium"
       >
         <Box direction="row" gap="small" align="center">
-          <Calendar size={30} />
-          <Text weight="bold">Rental schedules</Text>
+          <Calendar size={30} color="#114036" />
+          <Text weight="bold" color="#114036">
+            Rental schedules
+          </Text>
         </Box>
         <Box direction="row" gap="small" align="center">
-          <Notepad size={30} />
-          <Text weight="bold">Billings</Text>
+          <Notepad size={30} color="#114036" />
+          <Text weight="bold" color="#114036">
+            Billings
+          </Text>
         </Box>
         <Box direction="row" gap="small" align="center">
-          <Buildings size={30} />
-          <Text weight="bold">Organization</Text>
+          <Buildings size={30} color="#114036" />
+          <Text weight="bold" color="#114036">
+            Organization
+          </Text>
         </Box>
         <Box direction="row" gap="small" align="center">
-          <Lifebuoy size={30} />
-          <Text weight="bold">Support</Text>
+          <Lifebuoy size={30} color="#114036" />
+          <Text weight="bold" color="#114036">
+            Support
+          </Text>
         </Box>
       </Box>
 
@@ -117,7 +133,7 @@ const SidePane = () => {
             VK
           </Text>
         </Box>
-        <Text>Vardhan Koshal</Text>
+        <Text color="#114036">Vardhan Koshal</Text>
       </Box>
     </Box>
   );

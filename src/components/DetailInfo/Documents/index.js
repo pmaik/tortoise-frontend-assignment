@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Text, Image } from "grommet";
 import { FilePdf } from "phosphor-react";
 import { StyledButton } from "../../StyledComponents";
-import Signature from "./signature.png";
+import Signature from "../../../images/signature.png";
 import ApproveClaim from "../ApproveClaim";
 
 const Documents = () => {

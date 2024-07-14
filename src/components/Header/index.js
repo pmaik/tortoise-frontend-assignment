@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { Box, Text, Nav, Image } from "grommet";
 import { NewspaperClipping } from "phosphor-react";
 import { getNavListStyles } from "../StyledComponents";
-import { IPHONE_URL } from "../Constants";
+import IPhone from '../../images/iphone.png'
 
 const Header = () => {
   return (
@@ -55,9 +55,10 @@ const Header = () => {
         <Box>
           <Image
             fit="contain"
-            src={IPHONE_URL}
+            src={IPhone}
             width="200px"
             margin={{ right: "-40px", left: "-52px", top: "90px" }}
+            alt="IPhone Image"
           />
         </Box>
         <Box>

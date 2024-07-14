@@ -8,12 +8,12 @@ import {
   TableCell,
   Image,
 } from "grommet";
-import { Person } from "phosphor-react";
 import CustomHeader from "../TableHeader";
 import CustomTableCell from "../CustomTableCell";
 import { tableHeader, dummyData } from "../Constants";
 import { formatData } from "../utills";
-import IPhone from "./iphone_image.png";
+import IPhone from "../../images/iphone_image.png";
+import { peopleImages } from "../Constants";
 
 const OpenClaims = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -61,30 +61,31 @@ const OpenClaims = () => {
                               direction="row"
                               align="center"
                               justify="center"
-                              border
-                              round="50%"
-                              pad="4px"
-                              height="40px"
-                              width="40px"
                             >
-                              <Person size={32} />
+                              <Image
+                                height="40px"
+                                width="40px"
+                                fit="cover"
+                                src={peopleImages[ind % 5]}
+                                alt="People Image"
+                                style={{
+                                  background: "#EEEEEE",
+                                  borderRadius: "50%",
+                                }}
+                              />
                             </Box>
                           ) : header.id === "device" ? (
                             <Box
                               direction="row"
                               align="center"
                               justify="center"
-                              height="50px"
-                              width="50px"
-                              background="#EEEEEE"
-                              round
                             >
                               <Image
-                                height="40px"
-                                width="40px"
+                                height="50px"
+                                width="50px"
                                 fit="cover"
                                 src={IPhone}
-                                alt="IPhone"
+                                alt="IPhone Image"
                                 style={{ background: "#EEEEEE" }}
                               />
                             </Box>

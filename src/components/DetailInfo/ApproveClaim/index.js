@@ -1,7 +1,9 @@
 import React from "react";
-import { Box, Text } from "grommet";
-import { CheckCircle, Smiley, UserCircleGear, XCircle } from "phosphor-react";
+import { Box, Text, Image } from "grommet";
+import { CheckCircle, UserCircleGear, XCircle } from "phosphor-react";
 import { StyledButton } from "../../StyledComponents";
+import People1 from "../../../images/people7.png";
+import People2 from "../../../images/people6.png";
 
 const ApproveClaim = () => {
   return (
@@ -71,8 +73,18 @@ const ApproveClaim = () => {
             gap="small"
             height="xxsmall"
           >
-            <Box background="#f26c8d" pad="xsmall" round="50%">
-              <Smiley size={25} color="#fff" />
+            <Box direction="row" align="center" justify="center">
+              <Image
+                height="35px"
+                width="35px"
+                fit="cover"
+                src={People1}
+                alt="IPhone Image"
+                style={{
+                  background: "#EEEEEE",
+                  borderRadius: "50%",
+                }}
+              />
             </Box>
             <Text weight={600} style={{ opacity: "80%" }}>
               Jules Bianchi (You)
@@ -116,8 +128,18 @@ const ApproveClaim = () => {
           height="xxsmall"
           width="small"
         >
-          <Box background="#1ecee0" pad="xsmall" round="50%">
-            <Smiley size={25} color="#fff" />
+          <Box direction="row" align="center" justify="center">
+            <Image
+              height="35px"
+              width="35px"
+              fit="cover"
+              src={People2}
+              alt="IPhone Image"
+              style={{
+                background: "#EEEEEE",
+                borderRadius: "50%",
+              }}
+            />
           </Box>
           <Text weight={600} style={{ opacity: "80%" }}>
             Surya Harsha
