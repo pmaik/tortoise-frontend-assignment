@@ -51,7 +51,7 @@ const ForEmployee = ({
         align="center"
         justify="between"
       >
-        <Box>
+        <Box gap="xsmall">
           {claimValueIcon}
           <Box>
             <Text weight={500} size="small" style={{ opacity: "60%" }}>
@@ -62,7 +62,7 @@ const ForEmployee = ({
         </Box>
 
         {sponsoredIcon && (
-          <Box>
+          <Box gap="xsmall">
             {sponsoredIcon}
             <Box>
               <Text weight={500} size="small" style={{ opacity: "60%" }}>

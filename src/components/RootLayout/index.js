@@ -6,7 +6,7 @@ import FiltersPanel from "../FiltersPanel";
 
 const RootLayout = () => {
   return (
-    <Box width="xlarge" background="#fff" round="6px">
+    <Box width="xlarge" background="#fff" round="12px">
       <Header />
       <FiltersPanel />
       <Outlet />

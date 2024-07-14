@@ -5,7 +5,7 @@ import ClaimsDetailsHeader from "../DetailInfo/ClaimsDetailsHeader";
 
 const ClaimDetailsLayout = () => {
   return (
-    <Box round="6px">
+    <Box round="12px">
       <ClaimsDetailsHeader />
       <Outlet />
     </Box>

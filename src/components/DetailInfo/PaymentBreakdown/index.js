@@ -10,7 +10,7 @@ const PaymentBreakdown = () => {
     <Box
       width="xlarge"
       background="#fff"
-      round={{ size: "6px", corner: "bottom" }}
+      round={{ size: "12px", corner: "bottom" }}
       pad={{ vertical: "medium" }}
     >
       <Box

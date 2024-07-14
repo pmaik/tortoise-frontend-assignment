@@ -10,7 +10,7 @@ const ClaimDetails = () => {
     <Box
       width="xlarge"
       background="#fff"
-      round={{ size: "6px", corner: "bottom" }}
+      round={{ size: "12px", corner: "bottom" }}
       pad={{ vertical: "medium" }}
     >
       {/* Request, Payment & Claimed containers */}
@@ -58,7 +58,7 @@ const ClaimDetails = () => {
               <Text size="small" weight={500}>
                 Requested 5m ago
               </Text>
-              <Text weight="lighter" size="xsmall">
+              <Text size="small" weight={500} style={{ opacity: "50%" }}>
                 12th April 2024
               </Text>
             </Box>

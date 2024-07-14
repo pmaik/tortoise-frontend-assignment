@@ -11,7 +11,7 @@ const ClaimsDetailsHeader = () => {
   const path = location.pathname.split("/")[1];
 
   return (
-    <Box background="#FAFAFA" round={{ size: "6px", corner: "top" }}>
+    <Box background="#FAFAFA" round={{ size: "12px", corner: "top" }}>
       <Box
         direction="row"
         justify="between"
@@ -46,7 +46,16 @@ const ClaimsDetailsHeader = () => {
           pad="xsmall"
         >
           <Box background="#CBCBCB" round="50%" pad="2px">
-            <X size={10} color="#fff" />
+            <NavLink
+              to={`/open`}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <X size={15} color="#fff" />
+            </NavLink>
           </Box>
         </Box>
       </Box>
