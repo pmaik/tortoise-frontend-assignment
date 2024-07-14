@@ -38,7 +38,7 @@ const OpenClaims = () => {
           <Text>Loading.....</Text>
         </Box>
       ) : (
-        <Box>
+        <Box overflow="auto">
           <Table>
             <CustomHeader tableHeader={tableHeader} />
 
